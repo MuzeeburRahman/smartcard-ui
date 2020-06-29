@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "smartcard-ui"
+    }
+  },
+  "defaultProject": "smartcard-ui",
+  "cli": {
+    "analytics": "3663ce0f-8cb4-4425-9029-88bffe8ea659"
+  }
 }
