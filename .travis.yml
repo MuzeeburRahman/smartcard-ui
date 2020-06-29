@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t muzeeburrahman/smartcard-ui -f Dockerfile.dev .
 script:
-  - docker run muzeeburrahman/smartcard-ui:latest
+  - docker run muzeeburrahman/smartcard-ui npm test -- --coverage
 after_success:
   - docker build -t muzeeburrahman/smartcard-ui . 
 # Log in to Docker CLI to Push this run np Image to DockerHub of muzeeburrahman.
