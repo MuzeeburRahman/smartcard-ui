@@ -4,3 +4,10 @@ services:
 
 before_install:
   - docker build -t muzeeburrahman/smartcard-ui .
+script:
+  - docker run muzeeburrahman/smartcard-ui:latest
+after_success:
+  - docker build -t muzeeburrahman/smartcard-ui . 
+# Log in to Docker CLI to Push this Prod Image to DockerHub of muzeeburrahman.
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push muzeeburrahman/smartcard-ui
