@@ -1,0 +1,127 @@
+﻿<div class="card border-dark rounded-bottom">
+  <h4 class="card-header">Welocme to Smart Card App!!
+
+
+    <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+    <div *ngIf="users">
+      <p class="text-primary" *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</p>
+    </div>
+
+    <button (click)="readCard()" class="btn btn-primary float-right">Read Smart Card</button>
+  </h4>
+  <div *ngIf="!show" class="container-fluid-lg ">
+    <div class="p-2 mb-7 bg-info text-white">Please insert the Smart Card in Smart Card Reader to read the Card.</div>
+
+  </div>
+  <div *ngIf="show" class="card">
+    <!--  <img class="card-img-top" src="/assets/smartCard.jpg" alt="smartCard">  -->
+    <div class="card-body float-center">
+      <div class="container">
+        <div class="row">
+
+          <div class="col">
+            <h6 class="text-center">Name: <span class="badge badge-secondary">Mary Bowman </span></h6>
+          </div>
+          <div class="col">
+            <h6 class="text-center">MemberID: <span class="badge badge-secondary">656576757656</span></h6>
+          </div>
+          <div class="col">
+            <h6 class="text-center">DOB: <span class="badge badge-secondary">1947-11-11</span></h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <ngb-accordion *ngIf="show" #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel title="Eligiblity">
+      <ng-template ngbPanelContent>
+
+        <div class="row">
+          <div class="col">
+            <h6>Name: <span class="badge badge-secondary">Mary Bowman </span></h6>
+          </div>
+          <div class="col">
+            <h6>DOB: <span class="badge badge-secondary">1947-11-11</span></h6>
+          </div>
+          <div class="col">
+            <h6>Status: <span class="badge badge-success">Member is Eligible</span></h6>
+          </div>
+          <div class="col">
+            <h6>UHC: <span class="badge badge-secondary">89675</span></h6>
+          </div>
+          <div class="col">
+            <h6> Medical Care Complete Choice: <span class="badge badge-secondary">PRO</span></h6>
+          </div>
+        </div>
+
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Prior Authorization">
+      <ng-template ngbPanelContent>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">Commercial
+                </label></div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">Medical Id
+                </label></div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optradio">MediCare
+                </label></div>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col">
+              <label for="ex1">State*</label>
+              <input class="form-control" id="ex1" type="text">
+            </div>
+            <div class="col">
+              <label for="ex2">Procedure Code*</label>
+              <input class="form-control" id="ex2" type="text">
+            </div>
+            <div class="col"></div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Gaps in Care">
+      <ng-template ngbPanelContent>
+        <div class="card bg-success text-white">
+          <div class="card-header">Member is Eligible</div>
+          <div class="card-body">
+            <label for="ex2">UnitedHealthCare-8226</label><br>
+            <label for="ex2">MedicareComplete Choose</label>
+
+          </div>
+        </div>
+        <div class="card bg-warning text-white">
+          <div class="card-header">Potensial Gaps in Care</div>
+          <div class="card-body">
+            <label for="ex2">1.Controlling Blood Pressure</label><br>
+            <label for="ex2">2.Diabetes Care-Blood Suger Controlled</label>
+
+          </div>
+        </div>
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Member History">
+      <ng-template ngbPanelContent>
+        Under Construction.............................................
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+
+</div>
