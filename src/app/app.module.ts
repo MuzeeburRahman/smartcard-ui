@@ -14,8 +14,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 2d919f666dcaabd724ca306a851a5a11b6c8cf94
 
 @NgModule({
     imports: [
@@ -23,8 +26,12 @@ import { LoginComponent } from './login';
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
+<<<<<<< HEAD
         NgbModule,
         
+=======
+        NgbModule
+>>>>>>> 2d919f666dcaabd724ca306a851a5a11b6c8cf94
     ],
     declarations: [
         AppComponent,
