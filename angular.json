@@ -94,9 +94,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@uitk/angular/solas.css",
-                "src/styles.less",
-                "node_modules/@uitk/icons/webfonts/stylesheets/micro-interaction-icons.css"
+                "src/styles.less"
               ],
             "scripts": []
           }
